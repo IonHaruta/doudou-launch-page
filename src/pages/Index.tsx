@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Instagram, Send } from "lucide-react";
+import { Instagram, Phone } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const translations = {
@@ -84,7 +84,7 @@ const Index = () => {
             {t.instagram}
           </a>
           <div className="inline-flex items-center gap-3 rounded-full border border-primary bg-transparent px-8 py-4">
-            <Send className="h-5 w-5 text-foreground" />
+            <Phone className="h-5 w-5 text-foreground" />
             <span className="font-sans text-sm font-semibold tracking-wide text-foreground">+373 621 12 517</span>
           </div>
         </div>
