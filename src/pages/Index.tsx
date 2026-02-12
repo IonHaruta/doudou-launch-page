@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Instagram, Mail } from "lucide-react";
+import { Instagram, Facebook, Mail, Phone } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const translations = {
@@ -9,7 +9,7 @@ const translations = {
     heading: "Lansarea proiectului va avea loc în curând",
     subtitle: "Pregătim ceva special pentru cei mici. Rămâneți alături de noi!",
     instagram: "Instagram",
-    telegram: "Telegram",
+    facebook: "Facebook",
     langSwitch: "RU",
   },
   ru: {
@@ -18,14 +18,15 @@ const translations = {
     heading: "Запуск проекта состоится в ближайшее время",
     subtitle: "Мы готовим что-то особенное для малышей. Оставайтесь с нами!",
     instagram: "Instagram",
-    telegram: "Telegram",
+    facebook: "Facebook",
     langSwitch: "RO",
   },
 };
 
 const INSTAGRAM_URL =
   "https://www.instagram.com/doudouetcompagniemd?igsh=MTZqNzM0aTN0NTBxcg==";
-const TELEGRAM_URL = "https://t.me/+37362112517";
+const FACEBOOK_URL =
+  "https://www.facebook.com/share/1NuWgWCBYL/?mibextid=wwXIfr";
 
 const Index = () => {
   const [lang, setLang] = useState<"ro" | "ru">("ro");
@@ -72,7 +73,7 @@ const Index = () => {
           {t.subtitle}
         </p>
 
-        {/* Buttons */}
+        {/* Social buttons */}
         <div className="flex flex-col gap-4 sm:flex-row">
           <a
             href={INSTAGRAM_URL}
@@ -83,10 +84,33 @@ const Index = () => {
             <Instagram className="h-5 w-5" />
             {t.instagram}
           </a>
-          <div className="inline-flex items-center gap-3 rounded-full border border-primary bg-transparent px-8 py-4">
+          <a
+            href={FACEBOOK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 rounded-full bg-primary px-8 py-4 font-sans text-sm font-semibold tracking-wide text-primary-foreground transition-all hover:opacity-90"
+          >
+            <Facebook className="h-5 w-5" />
+            {t.facebook}
+          </a>
+        </div>
+
+        {/* Contact info */}
+        <div className="mt-4 flex flex-col gap-4 sm:flex-row">
+          <a
+            href="mailto:doudouetcompagniemd@gmail.com"
+            className="inline-flex items-center gap-3 rounded-full border border-primary bg-transparent px-8 py-4 transition-all hover:bg-primary/10"
+          >
             <Mail className="h-5 w-5 text-foreground" />
+            <span className="font-sans text-sm font-semibold tracking-wide text-foreground">doudouetcompagniemd@gmail.com</span>
+          </a>
+          <a
+            href="tel:+37362112517"
+            className="inline-flex items-center gap-3 rounded-full border border-primary bg-transparent px-8 py-4 transition-all hover:bg-primary/10"
+          >
+            <Phone className="h-5 w-5 text-foreground" />
             <span className="font-sans text-sm font-semibold tracking-wide text-foreground">+373 621 12 517</span>
-          </div>
+          </a>
         </div>
       </div>
 
