@@ -83,15 +83,10 @@ const Index = () => {
             <Instagram className="h-5 w-5" />
             {t.instagram}
           </a>
-          <a
-            href={TELEGRAM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 rounded-full border border-primary bg-transparent px-8 py-4 font-sans text-sm font-semibold tracking-wide text-foreground transition-all hover:bg-primary hover:text-primary-foreground"
-          >
-            <Send className="h-5 w-5" />
-            {t.telegram}
-          </a>
+          <div className="inline-flex items-center gap-3 rounded-full border border-primary bg-transparent px-8 py-4">
+            <Send className="h-5 w-5 text-foreground" />
+            <span className="font-sans text-sm font-semibold tracking-wide text-foreground">+373 621 12 517</span>
+          </div>
         </div>
       </div>
 
